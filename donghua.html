@@ -1,0 +1,91 @@
+<!--
+!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/vmc.slider.full.min.js"></script>
+</head>
+<body>
+<div class="content" style="width:1300px;height:300px;margin:30px auto;overflow:hidden;">
+    <div id="slider">
+        <a href="#"><img  style="width:1300px;height:300px" src="imgs/lun1.jpg"/></a>
+        <a href="#"><img style="width:1300px;height:300px" src="imgs/lun2.jpg"/></a>
+        <a href="#"><img style="width:1300px;height:300px" src="imgs/lun3.jpg"/></a>
+    </div>
+</div>
+<script>
+    $(function(){
+        $("#slider").vmcSlider({
+            width: 1300,
+            height: 300,
+            gridCol: 10,
+            gridRow: 5,
+            gridVertical: 20,
+            gridHorizontal: 10,
+            autoPlay: true,
+            ascending: true,
+            effects: [
+                'fade', 'fadeLeft', 'fadeRight', 'fadeTop', 'fadeBottom', 'fadeTopLeft', 'fadeBottomRight',
+                'blindsLeft', 'blindsRight', 'blindsTop', 'blindsBottom', 'blindsTopLeft', 'blindsBottomRight',
+                'curtainLeft', 'curtainRight', 'interlaceLeft', 'interlaceRight', 'mosaic', 'bomb', 'fumes'
+            ],
+            ie6Tidy: false,
+            random: false,
+            duration: 2000,
+            speed: 900
+        });
+    })
+</script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/bigimg.js"></script>
+    <style>
+        *{  margin: 0;
+            padding: 0;}
+        .block{
+            position: relative;
+            width:300px;
+            height:400px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .imgcenter {
+            width: 300px;
+            height: 400px;
+        }
+        .ceng{
+            width:120px;
+            height: 160px;
+            left: 0;
+            top :0;
+            position: absolute;
+            background: url("imgs/dian.png");
+        }
+        .bigimg{
+            width:300px;
+            height:400px;
+            border:1px solid green;
+            position: absolute;
+            left: 350px;
+            top:0;
+            display: none;
+            background: url("./imgs/hua.jpg") no-repeat;
+            background-size:750px 1000px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="block">
+    <img class="imgcenter" src="./imgs/hua.jpg"/>
+    <div class="bigimg"></div>
+</div>
+</body>
+</html>
